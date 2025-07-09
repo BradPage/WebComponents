@@ -13,9 +13,9 @@ class CommentsElement extends LitElement {
       controlName: 'dfs-workflow-comments',
       fallbackDisableSubmit: false,
       description: 'Notes and comments',
-      iconUrl:'https://jsdez.github.io/plugins/dfs-workflow-comments/dist/icon.svg',
+      iconUrl:'https://bradpage.github.io/WebComponents/public/media/icons/icon.svg',
       groupName: 'DFS',
-      version: '1.1',
+      version: '1.0',
       properties: {
         commentsBorder: {
           title: 'Show Border on comments',
