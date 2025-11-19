@@ -64,7 +64,7 @@ class CommentsElement extends LitElement {
           isValueField: true,
           properties: {
             comments: {
-              type: 'object', //change to object to deploy, change to array to use in the control
+              type: 'array', //change to object to deploy, change to array to use in the control
               description: 'Array of comments',
               items: {
                 type: 'object',
@@ -309,7 +309,7 @@ class CommentsElement extends LitElement {
             @click=${this.addComment}
             ?disabled=${!this.newComment.trim()}
           >
-            ${sendIcon} Post Comment to Workflow
+            ${sendIcon} Add Comment
           </button>
         </div>
       ` : ''}
