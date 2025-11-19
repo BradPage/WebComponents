@@ -309,7 +309,7 @@ class CommentsElement extends LitElement {
             @click=${this.addComment}
             ?disabled=${!this.newComment.trim()}
           >
-            ${sendIcon} Post Comment to Action Log
+            ${sendIcon} Add Comment
           </button>
         </div>
       ` : ''}
