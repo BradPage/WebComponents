@@ -277,7 +277,7 @@ svg></svg>
             @click=${this.addComment}
             ?disabled=${!this.newComment.trim()}
           >
-            ${it} Click to Post Comment to Workflow
+            ${it} Add Comment
           </button>
         </div>
       `}
