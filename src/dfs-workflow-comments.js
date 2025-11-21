@@ -64,7 +64,7 @@ class CommentsElement extends LitElement {
           isValueField: true,
           properties: {
             comments: {
-              type: 'array', //change to object to deploy, change to array to use in the control
+              type: 'object', //change to object to deploy, change to array to use in the control
               description: 'Array of comments',
               items: {
                 type: 'object',
@@ -98,7 +98,7 @@ class CommentsElement extends LitElement {
         },
       },
       events: ['ntx-value-change'],
-      standardProperties: { fieldLabel: true, description: true, readOnly: true, visibility: true},
+      standardProperties: { fieldLabel: true, description: true, readOnly: true, visibility: true, required:true},
     };
   }
 
@@ -309,7 +309,7 @@ class CommentsElement extends LitElement {
             @click=${this.addComment}
             ?disabled=${!this.newComment.trim()}
           >
-            ${sendIcon} Add Comment
+            ${sendIcon} Click to Post Comment to Workflow
           </button>
         </div>
       ` : ''}
