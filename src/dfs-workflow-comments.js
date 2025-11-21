@@ -15,7 +15,7 @@ class CommentsElement extends LitElement {
       description: 'Notes and comments',
       iconUrl:'https://bradpage.github.io/WebComponents/public/media/icons/icon.svg',
       groupName: 'DFS',
-      version: '1.3',
+      version: '1.0',
       properties: {
         commentsBorder: {
           title: 'Show Border on comments',
@@ -26,12 +26,6 @@ class CommentsElement extends LitElement {
           title: 'Striped comments',
           type: 'boolean',
           defaultValue: true,
-        },
-        isRequired: {
-          type: 'boolean',
-          title: 'Make Comment Required',
-          description: 'Prevent form submission without a comment',
-          defaultValue: false,
         },
         firstName: { type: 'string', title: 'First name' },
         lastName: { type: 'string', title: 'Last name' },
@@ -70,7 +64,7 @@ class CommentsElement extends LitElement {
           isValueField: true,
           properties: {
             comments: {
-              type: 'object', //change to object to deploy, change to array to use in the control
+              type: 'array', //change to object to deploy, change to array to use in the control
               description: 'Array of comments',
               items: {
                 type: 'object',
@@ -111,7 +105,6 @@ class CommentsElement extends LitElement {
   static properties = {
     commentsBorder: { type: Boolean },
     commentsStriped: { type: Boolean },
-    isRequired: { type: Boolean },
     firstName: { type: String },
     lastName: { type: String },
     email: { type: String },
@@ -132,7 +125,6 @@ class CommentsElement extends LitElement {
     super();
     this.commentsBorder = true;
     this.commentsStriped = true;
-    this.isRequired = false;
     this.firstName = '';
     this.lastName = '';
     this.email = '';
@@ -317,7 +309,7 @@ class CommentsElement extends LitElement {
             @click=${this.addComment}
             ?disabled=${!this.newComment.trim()}
           >
-            ${sendIcon} Click to Post Comment to Workflow
+            ${sendIcon} Add Comment
           </button>
         </div>
       ` : ''}
