@@ -309,7 +309,7 @@ class CommentsElement extends LitElement {
             @click=${this.addComment}
             ?disabled=${!this.newComment.trim()}
           >
-            ${sendIcon} Click to Post Comment to Workflow
+            ${sendIcon} Add Comment
           </button>
         </div>
       ` : ''}
