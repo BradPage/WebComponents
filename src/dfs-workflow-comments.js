@@ -98,7 +98,7 @@ class CommentsElement extends LitElement {
         },
       },
       events: ['ntx-value-change'],
-      standardProperties: { fieldLabel: true, description: true, readOnly: true, visibility: true },
+      standardProperties: { fieldLabel: true, description: true, readOnly: true, visibility: true},
     };
   }
 
