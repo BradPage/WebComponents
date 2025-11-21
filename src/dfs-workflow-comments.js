@@ -15,7 +15,7 @@ class CommentsElement extends LitElement {
       description: 'Notes and comments',
       iconUrl:'https://bradpage.github.io/WebComponents/public/media/icons/icon.svg',
       groupName: 'DFS',
-      version: '1.0',
+      version: '1.1',
       properties: {
         commentsBorder: {
           title: 'Show Border on comments',
