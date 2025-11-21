@@ -27,6 +27,12 @@ class CommentsElement extends LitElement {
           type: 'boolean',
           defaultValue: true,
         },
+        isRequired: {
+          type: 'boolean',
+          title: 'Make Comment Required',
+          description: 'Prevent form submission without a comment',
+          defaultValue: false,
+        },
         firstName: { type: 'string', title: 'First name' },
         lastName: { type: 'string', title: 'Last name' },
         email: { type: 'string', title: 'Email Address' },
@@ -98,13 +104,14 @@ class CommentsElement extends LitElement {
         },
       },
       events: ['ntx-value-change'],
-      standardProperties: { fieldLabel: true, description: true, readOnly: true, visibility: true, required: true},
+      standardProperties: { fieldLabel: true, description: true, readOnly: true, visibility: true },
     };
   }
 
   static properties = {
     commentsBorder: { type: Boolean },
     commentsStriped: { type: Boolean },
+    isRequired: { type: Boolean },
     firstName: { type: String },
     lastName: { type: String },
     email: { type: String },
@@ -125,6 +132,7 @@ class CommentsElement extends LitElement {
     super();
     this.commentsBorder = true;
     this.commentsStriped = true;
+    this.isRequired = false;
     this.firstName = '';
     this.lastName = '';
     this.email = '';
